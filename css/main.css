@@ -4,11 +4,13 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url("https://picsum.photos/960/960?image=1031");
+  background-image: url("https://picsum.photos/1920/1080?image=1031");
+  background-repeat: repeat-y;
   color: white;
   line-height: 1.6;
   text-align: center;
 }
+
 .container {
   max-width: 960px;
   margin: auto;
