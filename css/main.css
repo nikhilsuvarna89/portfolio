@@ -1,45 +1,59 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url("https://picsum.photos/1920/1080?image=1031");
-  background-repeat: repeat-y;
-  color: white;
-  line-height: 1.6;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+body,
+html {
+  height: 100%;
 }
 
-.container {
-  max-width: 960px;
-  margin: auto;
-  padding: 0 30px;
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color: black;
 }
-.navbar {
+
+body .container {
+  width: 100%;
+  height: 100%;
+  color: white;
+  position: absolute;
+  background-image: url("https://picsum.photos/1920/1080/?image=1031");
+  background-size: cover;
+  text-align: center;
+  z-index: -1;
+}
+
+body .navbar {
   margin-top: 150px;
 }
-.navbar ul {
+
+body .navbar ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-.navbar-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
-#showcase {
+
+body #showcase {
   height: 300px;
 }
-#showcase h1 {
+
+body #showcase #tag {
   font-size: 50px;
   line-height: 1.3;
   position: relative;
-  animation-name: heading;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: heading-tag;
+          animation-name: heading-tag;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
-@keyframes heading {
+
+@-webkit-keyframes heading-tag {
   0% {
     top: -50px;
   }
@@ -47,13 +61,8 @@ body {
     top: 200px;
   }
 }
-#content {
-  position: relative;
-  animation-name: content;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-}
-@keyframes content {
+
+@keyframes heading-tag {
   0% {
     top: -50px;
   }
@@ -61,22 +70,44 @@ body {
     top: 200px;
   }
 }
-#icon {
+
+body #showcase #icon {
   display: inline-block;
   opacity: 0;
   border-radius: 50%;
   position: relative;
-  animation-name: icon;
-  animation-duration: 3s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-
+  -webkit-animation-name: icon;
+          animation-name: icon;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-duration: 1s;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
-#icon:hover {
-  transform: rotateY(180deg);
+
+body #showcase #icon :hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
+
+@-webkit-keyframes icon {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+  100% {
+    top: 120px;
+    opacity: 1;
+  }
+}
+
 @keyframes icon {
   0% {
     top: -50px;
@@ -87,3 +118,4 @@ body {
     opacity: 1;
   }
 }
+/*# sourceMappingURL=main.css.map */
