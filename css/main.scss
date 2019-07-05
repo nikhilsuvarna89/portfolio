@@ -22,7 +22,7 @@ body {
     height: 100%;
     color: color(text);
     position: absolute;
-    background-image: url("https://picsum.photos/1920/1080/?image=1031");
+    background-image: url("https://picsum.photos/1920/1080/?image=1674");
     background-size: cover;
     text-align: center;
     z-index: -1;
@@ -84,6 +84,10 @@ body {
           opacity: 1;
         }
       }
+    }
+    footer p {
+      position: absolute;
+      bottom: 0px;
     }
   }
 }
